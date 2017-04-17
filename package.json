@@ -41,8 +41,8 @@
     "lint-staged": "^3.4.0",
     "pre-commit": "^1.2.2",
     "prettier-standard": "^1.0.6",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "react-router": "^4.0.0",
     "webpack": "^2.3.2"
   }
