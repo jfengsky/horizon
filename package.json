@@ -1,0 +1,49 @@
+{
+  "name": "horizon",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run server & npm run watch",
+    "server": "node-dev register.js",
+    "debugger": "DEBUG=anna:* npm start",
+    "watch": "webpack --progress --colors --watch",
+    "prettier-code": "lint-staged"
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "pre-commit": [
+    "prettier-code"
+  ],
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-latest": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.24.0",
+    "express-react-views": "^0.10.2",
+    "lint-staged": "^3.4.0",
+    "pre-commit": "^1.2.2",
+    "prettier-standard": "^1.0.6",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0",
+    "webpack": "^2.3.2"
+  }
+}
