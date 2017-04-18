@@ -1,4 +1,20 @@
 import React from 'react'
+import Home from '../component/Home'
+import Api from '../component/Api'
+import Edit from '../component/Edit'
+
+const Root = () => (
+  <div>
+    <Home />
+    <Api />
+    <Edit />
+  </div>
+)
+
+export default Root
+
+/*
+import React from 'react'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 import Home from '../component/Home'
@@ -21,3 +37,4 @@ const Root = () => (
 )
 
 export default Root
+*/
