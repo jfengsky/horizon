@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node-dev register.js",
+    "startClient": "npm run buildClient & npm start",
     "buildServer": "webpack --config webpack.config.server.js --watch",
     "buildClient": "webpack --watch",
     "server": "node-dev dist/server.js",
@@ -39,6 +40,7 @@
     "antd": "^2.9.3",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-plugin-import": "^1.1.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
@@ -48,11 +50,17 @@
     "koa": "^2.2.0",
     "koa-json": "^2.0.2",
     "koa-router": "^7.1.1",
+    "koa-static": "^3.0.0",
     "lint-staged": "^3.4.0",
     "pre-commit": "^1.2.2",
     "prettier-standard": "^4.1.0",
+    "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
     "webpack": "^2.4.1",
     "webpack-node-externals": "^1.5.4"
   }
