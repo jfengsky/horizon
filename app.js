@@ -8,7 +8,7 @@ const app = new Koa()
 
 // 静态目录
 const DIST = __dirname + '/dist/'
-const LIB = __dirname + '/lib/'
+const LIB = __dirname + '/node_modules/'
 app.use(staticServe(DIST))
 app.use(staticServe(LIB))
 
@@ -19,4 +19,4 @@ app.use(json())
 app.use(index.routes())
 
 const PORT = 3300
-app.listen(PORT)
+app.listen(PORT,()=>console.log(`start server http://localhost:${PORT}`))

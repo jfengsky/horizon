@@ -4,8 +4,8 @@ export default `
       <meta charset="utf-8">
       <title>client</title>
       <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
-      <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <link href="/css/flat-ui.min.css" rel="stylesheet">
+      <link href="/bootflat/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/bootflat/css/site.min.css" rel="stylesheet">
     </head>
     <body>
       <div id="root"></div>

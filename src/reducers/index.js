@@ -1,5 +1,5 @@
 const initialState = {
-  count: 0
+  nav: 'home'
 }
 
 export default (state = initialState, action) => {
