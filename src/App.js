@@ -25,10 +25,10 @@ class App extends Component {
   }
 }
 
-// const mapStateToProps = (state, ownProps) => {
-//   return {
-//     ...state
-//   }
-// }
+const mapStateToProps = (state, ownProps) => {
+  return {
+    ...state
+  }
+}
 
-export default App
+export default connect(mapStateToProps)(App)

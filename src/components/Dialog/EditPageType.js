@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react'
 
+import {FETCH_SAVE_PAGETYPE} from '../../store/fetch'
 import Select from '../Select'
 
 class EditPageType extends Component {
@@ -25,10 +26,17 @@ class EditPageType extends Component {
                     type='text'
                     className='form-control'
                     placeholder='请输入页面类型'
+                    ref='pageTypeInput'
                   />
                 </div>
                 <div className='col-xs-2'>
-                  <button type='button' className='btn btn-success'>创建</button>
+                  <button
+                    type='button'
+                    className='btn btn-success'
+                    onClick={this.createPageType}
+                  >
+                    创建
+                  </button>
                 </div>
               </div>
               <div className='row' style={{marginTop: 10}}>
@@ -45,6 +53,17 @@ class EditPageType extends Component {
         </div>
       </div>
     )
+  }
+
+  createPageType = async e => {
+    let value = this.refs.pageTypeInput.value.trim()
+    if (value) {
+      let result = await FETCH_SAVE_PAGETYPE({
+        type: 'save',
+        text: value
+      })
+      console.log(result)
+    }
   }
 }
 
