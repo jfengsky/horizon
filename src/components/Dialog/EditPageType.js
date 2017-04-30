@@ -2,8 +2,14 @@ import React, {Component, PropTypes} from 'react'
 
 import {FETCH_SAVE_PAGETYPE} from '../../store/fetch'
 import Select from '../Select'
+import InputText from '../InputText'
 
 class EditPageType extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
+
   render () {
     return (
       <div className='modal' style={{display: 'block'}}>
@@ -21,13 +27,9 @@ class EditPageType extends Component {
             </div>
             <div className='modal-body'>
               <div className='row'>
+
                 <div className='col-xs-10'>
-                  <input
-                    type='text'
-                    className='form-control'
-                    placeholder='请输入页面类型'
-                    ref='pageTypeInput'
-                  />
+                  <InputText />
                 </div>
                 <div className='col-xs-2'>
                   <button
@@ -38,6 +40,7 @@ class EditPageType extends Component {
                     创建
                   </button>
                 </div>
+
               </div>
               <div className='row' style={{marginTop: 10}}>
                 <div className='col-xs-10'>
@@ -62,6 +65,7 @@ class EditPageType extends Component {
         type: 'save',
         text: value
       })
+      // TODO
       console.log(result)
     }
   }
