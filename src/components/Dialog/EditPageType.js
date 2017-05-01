@@ -7,10 +7,13 @@ import InputText from '../InputText'
 class EditPageType extends Component {
   constructor (props) {
     super(props)
-    this.state = {}
+    this.state = {
+      typeError: false
+    }
   }
 
   render () {
+    let {typeError} = this.state
     return (
       <div className='modal' style={{display: 'block'}}>
         <div className='modal-dialog'>
@@ -29,7 +32,7 @@ class EditPageType extends Component {
               <div className='row'>
 
                 <div className='col-xs-10'>
-                  <InputText />
+                  <InputText ref='pageTypeInput' error={typeError} />
                 </div>
                 <div className='col-xs-2'>
                   <button
@@ -67,6 +70,10 @@ class EditPageType extends Component {
       })
       // TODO
       console.log(result)
+    } else {
+      this.setState({
+        typeError: true
+      })
     }
   }
 }
