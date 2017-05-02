@@ -32,7 +32,7 @@ class EditPageType extends Component {
               <div className='row'>
 
                 <div className='col-xs-10'>
-                  <InputText ref='pageTypeInput' error={typeError} />
+                  <InputText error={typeError} />
                 </div>
                 <div className='col-xs-2'>
                   <button
