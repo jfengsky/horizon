@@ -6,7 +6,7 @@ import {pagetType} from '../src/config/apis'
 
 const index = new Router()
 
-index.get('/', async ctx => {
+index.get('*', async ctx => {
   ctx.body = clientTpl
   // await ctx.send({index: 'index'})
 })
